@@ -35,7 +35,7 @@ Every FP4 / NVFP4 / MXFP4 / INT8 / INT4 / W4A4 conversion in one place.
 | **Noct Q Anime** | ![int8][badge-int8] | 7.26 GB | ⚠️ [![][gh-Noctaluna]](https://huggingface.co/Noctaluna/Noct-Q-Anime-Uncensored-Qwen-Image-2.1) | Merged anime fine-tune of the DiT, single file, int8 ConvRot. Fits 8–12 GB cards. **Without the word "anime" in the prompt you get a photo** — the card is blunt that there is no trigger word. 25 steps, `euler`/`simple`, CFG 3. Uncensored: it will render explicit content. The card names no second parent model or merge recipe, so the lineage is Qwen 2.1 plus undisclosed transformer edits. |
 | **W4A4 NVFP4** | ![nvfp4][badge-nvfp4] | 4.88 GB | [![][gh-ModelsLab]](https://huggingface.co/ModelsLab/Qwen-Image-2.1-W4A4-nvfp4) | DiT only; near-identical to the INT4 build. |
 | **W4A4 INT4** | ![int4][badge-int4] | 4.66 GB | [![][gh-ModelsLab]](https://huggingface.co/ModelsLab/Qwen-Image-2.1-W4A4-int4) | DiT only. |
-| **Uncensored NVFP4** | ![nvfp4][badge-nvfp4] | 4.20 GB | ⚠️ [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF/resolve/main/qwen-image-2.1-UC-NVFP4.safetensors) | DiT only, native NVFP4 rather than a GGUF conversion. Repo's own 192 F8_E4M3 scales against 192 FP32 originals. |
+| **Uncensored NVFP4** | ![nvfp4][badge-nvfp4] | 4.20 GB | ⚠️ [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-Quantized/resolve/main/qwen-image-2.1-UC-NVFP4.safetensors) | DiT only, native NVFP4 rather than a GGUF conversion. Repo's own 192 F8_E4M3 scales against 192 FP32 originals. |
 
 <p id="quant-fp8" align="center">· · · · · · · · · · · · · ·</p>
 

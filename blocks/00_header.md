@@ -22,6 +22,7 @@ A curated list of checkpoints, quants, prompt engines, LoRAs, and tooling for **
 * [Quick start](#quick-start)
 * [Official checkpoints](#official)
   * [Base model](#official-base)
+  * [Official Turbo](#official-turbo)
   * [ComfyUI official](#official-comfy)
 * [Text encoders &amp; prompt engines](#encoders)
   * [Prompt rewriters](#pe)
@@ -61,7 +62,8 @@ Pick your entry point based on the runtime you already have.
 | Use it in ComfyUI | **[Comfy-Org](https://huggingface.co/Comfy-Org/Qwen-Image-2.1)** | Pre-split folder layout, Day-0 native nodes |
 | Fit it in 8–12 GB VRAM | **[INT4ConvRot-ComfyUI](https://huggingface.co/chfm/Qwen-Image-2.1-INT4ConvRot-ComfyUI)** | Complete ComfyUI pack incl. int4 ConvRot DiT + TE |
 | Run locally with llama.cpp / GGUF | **[Unsloth GGUF](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF)** | Widest quant spread, Q2_K → Q8_0 |
-| Generate in 4 steps | **[Viggle Turbo](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo)** | Official turbo distill + LoRA variants |
+| Generate in 8 steps (official) | **[Qwen-Image-2.1-Turbo](https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo)** | Qwen's own 8-step checkpoint; CFG 1, schedule carried in the weights |
+| Generate in 4 steps | **[Viggle Turbo](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo)** | Community DMD distill + LoRA variants |
 | On a Mac (Apple Silicon) | **[MLX-4bit](https://huggingface.co/themindstudio/Qwen-Image-2.1-MLX-4bit)** | MLX 4-bit, native unified memory |
 | Improve prompt quality | **[PE-T2I](https://huggingface.co/Qwen/Qwen-Image-2.1-PE-T2I)** | Official prompt rewriter + aspect-ratio picker |
 
