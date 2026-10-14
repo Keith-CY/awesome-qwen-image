@@ -92,6 +92,19 @@
 [gh-yunfengwang]: https://img.shields.io/badge/yunfengwang-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-zcf0508]: https://img.shields.io/badge/zcf0508-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
+<!-- CIVITAI AUTHOR BADGES -->
+[cv-AIGC--Singularity]: https://img.shields.io/badge/AIGC--Singularity-lightgrey?style=flat-square
+[cv-Danrisi]: https://img.shields.io/badge/Danrisi-lightgrey?style=flat-square
+[cv-Luntrix]: https://img.shields.io/badge/Luntrix-lightgrey?style=flat-square
+[cv-NO8D]: https://img.shields.io/badge/NO8D-lightgrey?style=flat-square
+[cv-RICK666]: https://img.shields.io/badge/RICK666-lightgrey?style=flat-square
+[cv-Ray3780]: https://img.shields.io/badge/Ray3780-lightgrey?style=flat-square
+[cv-TP--AI--63]: https://img.shields.io/badge/TP--AI--63-lightgrey?style=flat-square
+[cv-l15625089091628]: https://img.shields.io/badge/l15625089091628-lightgrey?style=flat-square
+[cv-latent--space--dreams]: https://img.shields.io/badge/latent--space--dreams-lightgrey?style=flat-square
+[cv-qingfengy36939]: https://img.shields.io/badge/qingfengy36939-lightgrey?style=flat-square
+[cv-saladin]: https://img.shields.io/badge/saladin-lightgrey?style=flat-square
+
 <!-- HEADER BADGES -->
 [hf-shield]: https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black
 [hf-url]: https://huggingface.co/Qwen/Qwen-Image-2.1
