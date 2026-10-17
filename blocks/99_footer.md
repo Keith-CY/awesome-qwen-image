@@ -50,6 +50,7 @@
 [gh-catplusplus]: https://img.shields.io/badge/catplusplus-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-cgb]: https://img.shields.io/badge/cgb-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-changh95]: https://img.shields.io/badge/changh95-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-chatrlabs]: https://img.shields.io/badge/chatrlabs-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-chfm]: https://img.shields.io/badge/chfm-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-circulus]: https://img.shields.io/badge/circulus-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-congruency]: https://img.shields.io/badge/congruency-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -57,6 +58,7 @@
 [gh-devin--lai]: https://img.shields.io/badge/devin--lai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-dh123456789123]: https://img.shields.io/badge/dh123456789123-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-diffnamehard]: https://img.shields.io/badge/diffnamehard-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-dx8152]: https://img.shields.io/badge/dx8152-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-e--n--v--y]: https://img.shields.io/badge/e--n--v--y-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-empero--ai]: https://img.shields.io/badge/empero--ai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-evankuo]: https://img.shields.io/badge/evankuo-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -73,6 +75,7 @@
 [gh-madebyollin]: https://img.shields.io/badge/madebyollin-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-mingyi456]: https://img.shields.io/badge/mingyi456-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-modelvram]: https://img.shields.io/badge/modelvram.com-lightgrey?style=flat-square
+[gh-myllmbox]: https://img.shields.io/badge/myllmbox-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-netdur]: https://img.shields.io/badge/netdur-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-netrunner--exe]: https://img.shields.io/badge/netrunner--exe-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ped4enko]: https://img.shields.io/badge/ped4enko-lightgrey?style=flat-square&logo=huggingface&logoColor=white
