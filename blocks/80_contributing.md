@@ -3,7 +3,7 @@
 ## ✎ Contributing
 
 This list is a **set of Markdown files, not one**. `README.md` is generated and
-should never be edited directly — your change will be overwritten on the next
+should never be edited directly, since your change will be overwritten on the next
 build. Each section lives in its own file under [`blocks/`](blocks/):
 
 | To change… | Edit this file |
@@ -18,7 +18,7 @@ build. Each section lives in its own file under [`blocks/`](blocks/):
 | Tools, notebooks, training scripts | [`blocks/70_tools.md`](blocks/70_tools.md) |
 | Badge and link definitions | [`blocks/99_footer.md`](blocks/99_footer.md) |
 
-The file prefix controls the order — the build concatenates `blocks/*.md` in
+The file prefix controls the order: the build concatenates `blocks/*.md` in
 filename order, so `10_` always lands before `20_`. A new section just needs a
 new number.
 

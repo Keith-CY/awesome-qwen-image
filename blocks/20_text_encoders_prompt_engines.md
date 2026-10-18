@@ -2,13 +2,13 @@
 
 ## ⚲ Text encoders &amp; prompt engines
 
-Qwen-Image 2.1 conditions on **Qwen3-VL-8B**, which at BF16 is the largest file in the stack. It also ships dedicated **prompt-rewriting** models — separate text models that take a short request in any language and return a detailed English prompt plus a recommended aspect ratio. Neither is part of the diffusion path; both are optional, and you can run the base model without either.
+Qwen-Image 2.1 conditions on **Qwen3-VL-8B**, the largest file in the stack at BF16. It also ships dedicated **prompt-rewriting** models: separate text models that take a short request in any language and return a detailed English prompt plus a recommended aspect ratio. Both are optional; the base model runs without either.
 
 <p id="pe" align="center">· · · · · · · · · · · · · ·</p>
 
 ### ▣ Prompt rewriters
 
-The official pair is fine-tuned Qwen3.5-VL 9B. The **Pocket** builds are fine-tuned from Qwen3.5 base models instead — roughly 5× smaller, text-to-image only.
+The official pair is fine-tuned Qwen3.5-VL 9B. The **Pocket** builds are fine-tuned from Qwen3.5 base models instead, roughly 5× smaller and text-to-image only.
 
 | Name | Task | Params | Precision | Size | Links |
 | :--- | :---: | :---: | :---: | :---: | :---: |
@@ -19,14 +19,14 @@ The official pair is fine-tuned Qwen3.5-VL 9B. The **Pocket** builds are fine-tu
 
 The official rewriters ship a `system_prompt.txt` and work with `AutoModelForCausalLM` + `AutoTokenizer`. Output is JSON after a reasoning block, so split on the think-tag before parsing. The T2I rewriter also returns a recommended `wh_ratio` you can map straight to a size.
 
-Each official repo splits into four `model-0000N.safetensors` shards plus a `model.safetensors.index.json`, so download the repo — there is no single-file build to link to. The 0.8B Pocket build also ships a `Q8_0` GGUF (0.81 GB) for llama.cpp.
+Each official repo splits into four `model-0000N.safetensors` shards plus a `model.safetensors.index.json`, so download the repo. There is no single-file build to link to. The 0.8B Pocket build also ships a `Q8_0` GGUF (0.81 GB) for llama.cpp.
 
 <p id="heretic" align="center">· · · · · · · · · · · · · ·</p>
 
 ### ▣ Heretic &amp; abliterated
 
 > [!WARNING]
-> These repos have the safety refusal direction **abliterated**. The model no longer refuses prompt content, which means it will happily rewrite anything you ask. Same Qwen Research License as the base weights — the license does not grant you additional rights.
+> These repos have the safety refusal direction **abliterated**. The model no longer refuses prompt content, which means it will happily rewrite anything you ask. Same Qwen Research License as the base weights, and the license does not grant you additional rights.
 >
 > Applied to both halves of the text stack: the **text encoder** (the conditioning signal itself no longer refuses) and the **prompt rewriter**.
 
@@ -50,7 +50,7 @@ Each official repo splits into four `model-0000N.safetensors` shards plus a `mod
 
 Start with the **TE GGUF** build if you want one download: Q4_K_M (5.03 GB), fp8 (9.34 GB), bf16 (17.53 GB), plus a 1.16 GB `mmproj` projector, all in one repo.
 
-**DHQ** (Dual-Head Quant) is a sibling of that build, not a different model: the same heretic weights re-quantized so each tensor gets the precision that matters to what the **Qwen 2.1 DiT actually reads** — measured through the DiT's own text-input stage rather than by next-token loss. Every file is byte-for-byte the same *size* as llama.cpp's build of that name and better at it. The ladder runs IQ2_S → IQ4_XS plus Q2_K / Q3_K_M / Q4_K_M, and each one ships its imatrix recipe. Take DHQ below Q5; at Q5 and above the standard recipe already matches it, so there is no reason to. It is tuned for this DiT specifically — Ideogram 4 and the other Qwen3-VL-8B consumers can load the files but were not tuned for.
+**DHQ** (Dual-Head Quant) is the same heretic weights re-quantized by what the **Qwen 2.1 DiT actually reads**, measured through the DiT's own text-input stage rather than by next-token loss. Every file is the same *size* as llama.cpp's build of that name. The ladder runs IQ2_S → IQ4_XS plus Q2_K / Q3_K_M / Q4_K_M, each with its imatrix recipe. Take DHQ below Q5; at Q5 and above the standard recipe already matches it. Tuned for this DiT specifically; other Qwen3-VL-8B consumers can load the files but were not tuned for.
 
 <p id="pe-quant" align="center">· · · · · · · · · · · · · ·</p>
 
@@ -65,5 +65,5 @@ Start with the **TE GGUF** build if you want one download: Q4_K_M (5.03 GB), fp8
 | **Heretic T2I int8 tensorwise** | int8 tensorwise ConvRot | ![int8][badge-int8] | 9.99 GB | [![][gh-diffnamehard]](https://huggingface.co/diffnamehard/Qwen-Image-2.1-PE-T2I-Heretic-int8-tensorwise-convrot) |
 | **Heretic PE int8 ConvRot** | int8 ConvRot (T2I + I2I) | ![int8][badge-int8] | 19.91 GB | [![][gh-netrunner--exe]](https://huggingface.co/netrunner-exe/Qwen-Image-2.1-PE-Heretic) |
 
-The INT8 ConvRot pack covers both PE-T2I and PE-I2I in one download. The heretic int8 ConvRot pair does too, and unlike the tensorwise build it keeps the MTP head — 1,395 tensors against 829, one file per task at 9.96 GB.
+The INT8 ConvRot pack covers both PE-T2I and PE-I2I in one download, and so does the heretic int8 ConvRot pair, which unlike the tensorwise build keeps the MTP head (1,395 tensors against 829, one file per task at 9.96 GB).
 

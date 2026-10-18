@@ -22,13 +22,13 @@ The reference release, and the only repo you need for a standard Diffusers setup
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Qwen-Image-2.1-Turbo** | ![bf16][badge-bf16] | diffusers | 14.23 GB | 17.53 GB (Qwen3-VL-8B) | 0.68 GB | [![][gh-Qwen]](https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo) |
 
-Qwen's own accelerated checkpoint, released **2026-10-09**: the same 7B architecture at **8 denoising steps**, **CFG 1.0** by default, and the recommended sampling schedule is carried *inside the checkpoint*, so `QwenImage21Pipeline` configures the sampler itself — no manual sigma grid. Prefix KV caching reuses the text and reference-image context across steps, which is where the speed comes from on editing. Needs a diffusers build with pipeline-configured sampling sigmas (`transformers>=5.17.0`; support landed in diffusers PR #14950). Card examples run text-to-image at 1696×2528 and editing at 2048×2048. The ComfyUI pre-split build of these weights is the **Turbo** rows in the Comfy-Org table below; the community few-step lines live under [Turbo](#turbo).
+Qwen's own accelerated checkpoint, released **2026-10-09**: the same 7B architecture at **8 steps**, **CFG 1.0**, with the sampling schedule carried *inside the checkpoint*, so the pipeline configures the sampler itself. Prefix KV caching reuses the text and reference context across steps. Needs a diffusers build with pipeline-configured sampling. The ComfyUI pre-split build is the **Turbo** rows in the Comfy-Org table below; the community few-step lines live under [Turbo](#turbo).
 
 <p id="official-comfy" align="center">· · · · · · · · · · · · · ·</p>
 
 ### ▣ ComfyUI official
 
-**[Comfy-Org](https://huggingface.co/Comfy-Org/Qwen-Image-2.1)** — the Day-0 ComfyUI repackage, now covering the base model and the official Turbo side by side. Files land directly in `models/` with no renaming.
+**[Comfy-Org](https://huggingface.co/Comfy-Org/Qwen-Image-2.1)** is the Day-0 ComfyUI repackage, covering the base model and the official Turbo side by side. Files land directly in `models/` with no renaming.
 
 | Name | Precision | Size | Links |
 | :--- | :---: | :---: | :---: |
@@ -47,11 +47,11 @@ Qwen's own accelerated checkpoint, released **2026-10-09**: the same 7B architec
 | **Turbo LoRA** | ![bf16][badge-bf16] | 0.91 GB | [![][gh-Comfy--Org]](https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/loras/qwen_image_2.1_turbo_lora_avg_rank_178_bf16.safetensors) |
 
 > [!TIP]
-> `ConvRot` files are ComfyUI's native rotated-channel integer format. Use a recent ComfyUI build and load them with the standard diffusion-model and text-encoder loaders — no custom nodes required.
+> `ConvRot` files are ComfyUI's native rotated-channel integer format; a recent ComfyUI build loads them with the standard diffusion-model and text-encoder loaders, no custom nodes required.
 >
 > Destination folders: **Image Model** → `models/diffusion_models/`, **Text Encoder** and both **Prompt Engine** rows → `models/text_encoders/`, **VAE** → `models/vae/`, both **ControlNet Union** rows → `models/model_patches/`, **Turbo LoRA** → `models/loras/`.
 >
-> The two **Image Model (Turbo)** rows are the official 8-step checkpoint pre-split for ComfyUI — same weights as the Qwen repo above, 8 steps and CFG 1. If you would rather keep the base DiT and switch speed at runtime, the **Turbo LoRA** row is the adapter extracted from those weights (average rank 178, by Kijai): load it on the BF16 base with `LoraLoaderModelOnly` at strength 1.0, and do not stack it on a Turbo model.
+> The two **Image Model (Turbo)** rows are the official 8-step checkpoint pre-split for ComfyUI, same weights as the Qwen repo above. To switch speed at runtime instead, the **Turbo LoRA** row is the adapter extracted from those weights (average rank 178, by Kijai): load it on the BF16 base with `LoraLoaderModelOnly` at strength 1.0, and do not stack it on a Turbo model.
 >
-> The two ControlNet rows are the Alibaba PAI Union checkpoint repacked, not an official Qwen release — the int8 build is the cheapest ControlNet here by half. The first **Image Model** row also ships as `model_patches/`, so a ComfyUI ControlNet workflow wants a matching-precision base.
+> The two ControlNet rows are the Alibaba PAI Union checkpoint repacked, not an official Qwen release; the int8 build is the cheapest ControlNet here by half.
 

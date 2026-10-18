@@ -1,6 +1,6 @@
 # Awesome Qwen-Image 2.1
 
-A curated list of checkpoints, quants, prompt engines, LoRAs, and tooling for **Qwen-Image 2.1** — Alibaba's 7B unified text-to-image and image-editing model.
+A curated list of checkpoints, quants, prompt engines, LoRAs, and tooling for **Qwen-Image 2.1**, Alibaba's 7B unified text-to-image and image-editing model.
 
 <div align="center">
 
@@ -69,17 +69,17 @@ Pick your entry point based on the runtime you already have.
 
 **Official resources**
 
-* [Qwen-Image-2.1 model card](https://huggingface.co/Qwen/Qwen-Image-2.1) — official weights, license, aspect-ratio table
-* [Qwen-Image-2.1 GitHub repo](https://github.com/QwenLM/Qwen-Image-2.1) — inference code, news, supported frameworks
-* [Qwen blog: Qwen-Image-2.1](https://qwen.ai/blog?id=qwen-image-2.1) — release notes with architecture and benchmark figures
-* [ComfyUI native workflow example](https://docs.comfy.org/tutorials/image/qwen/qwen-image-2-1) — official ComfyUI tutorial
-* [ModelScope mirror](https://modelscope.cn/models/Qwen/Qwen-Image-2.1) — official CN mirror
+* [Qwen-Image-2.1 model card](https://huggingface.co/Qwen/Qwen-Image-2.1): official weights, license, aspect-ratio table
+* [Qwen-Image-2.1 GitHub repo](https://github.com/QwenLM/Qwen-Image-2.1): inference code, news, supported frameworks
+* [Qwen blog: Qwen-Image-2.1](https://qwen.ai/blog?id=qwen-image-2.1): release notes with architecture and benchmark figures
+* [ComfyUI native workflow example](https://docs.comfy.org/tutorials/image/qwen/qwen-image-2-1): official ComfyUI tutorial
+* [ModelScope mirror](https://modelscope.cn/models/Qwen/Qwen-Image-2.1): official CN mirror
 
 **Model facts worth knowing**
 
 * **7B parameters** in the visual generation component, **32 single-stream DiT layers**.
 * Mixed-granularity attention (token-level causal for text, chunk-level for image) with **prefix KV cache reuse** for multi-reference editing.
-* Native **RGBA** output — the prompt decides whether the result has an alpha channel.
+* Native **RGBA** output: the prompt decides whether the result has an alpha channel.
 * Editing accepts **up to 10 reference images**, plus circles, painted annotations, or separate masks for local edits.
 * **Qwen3-VL-8B** is the text encoder, so the text encoder is the largest single download at ~17.5 GB BF16.
 * Default sample setting is **40 steps without classifier-free guidance**; CFG is available for prompt adherence.
