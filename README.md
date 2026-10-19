@@ -626,6 +626,7 @@ Two drop-in decoder swaps and one preview-only toy. The first is a real finetune
 | **ComfyUI-AlphaTrace** | ![Node pack][ltype-nodes] | [![Nynxz](https://img.shields.io/badge/Nynxz-17a2b8?style=flat-square&logo=github&logoColor=white)](https://github.com/Nynxz/ComfyUI-AlphaTrace) | Diagnostic sampler nodes for the native RGBA output: they emit the predicted image, the alpha map and per-step alpha statistics. Purely observational. For 2.1 pass **LTXVScheduler** as `sigmas` to match the official schedule. MIT, example workflow included. |
 | **Qwen-Image-2.1 VRAM calculator** | ![Utility][ltype-utility] | [![][gh-modelvram]](https://modelvram.com/qwen-image-2-1-vram-calculator/) | Pick the DiT, text encoder and VAE files, where the encoder runs and the image size; it shows the peak VRAM range and which 8–32 GB GPUs fit. |
 | **Image Studio** | ![Utility][ltype-utility] | [![][gh-tamimKTH]](https://github.com/tamimKTH/image-studio) | Local web app for Apple Silicon (64 GB+): text-to-image, edits with up to 10 reference images, transparent PNGs, and a node canvas that chains steps. Runs the Uncensored Q8_0 GGUF on ComfyUI. AGPL. |
+| **Kokon** | ![Utility][ltype-utility] | [![][gh-GabrieleLozupone]](https://github.com/GabrieleLozupone/kokon) | Desktop app for Windows and macOS that runs the 8-step Turbo build on stable-diffusion.cpp, with no Python or ComfyUI. Text-to-image, instruction edits, up to 10 reference images, masked region edits, outpaint and upscale. Uses the Turbo Q4_K GGUF, so 12 GB of VRAM is enough; 16 GB+ runs edits natively at 2K. CUDA on NVIDIA, Vulkan and Metal in beta. Ships an MCP server and a local HTTP API. AGPL. |
 
 **Gotchas**
 
@@ -683,6 +684,7 @@ new number.
 [gh-EliovpAI]: https://img.shields.io/badge/EliovpAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-FlagRelease]: https://img.shields.io/badge/FlagRelease-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Frosty40]: https://img.shields.io/badge/Frosty40-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-GabrieleLozupone]: https://img.shields.io/badge/GabrieleLozupone-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-Gogodr]: https://img.shields.io/badge/Gogodr-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-HangGlidersRule]: https://img.shields.io/badge/HangGlidersRule-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-HarleyWang]: https://img.shields.io/badge/HarleyWang-lightgrey?style=flat-square&logo=huggingface&logoColor=white
